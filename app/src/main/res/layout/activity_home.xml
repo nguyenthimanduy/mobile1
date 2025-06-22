@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp"
+    tools:context=".HomeActivity">
+
+
+
+    <!-- Banner image -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:src="@drawable/banh"
+        android:scaleType="centerCrop"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Welcome to DoLa Food!"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:background="#FF5722"
+        android:textColor="#FFFFFF"
+        android:padding="12dp"
+        android:layout_marginBottom="8dp" />
+    <!-- Search box -->
+    <EditText
+        android:id="@+id/searchMeal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Find your meal"
+        android:drawableLeft="@android:drawable/ic_menu_search"
+        android:drawablePadding="8dp"
+        android:padding="10dp"
+        android:background="@android:drawable/edit_text"
+        android:layout_marginBottom="8dp" />
+
+    <!-- ListView -->
+    <ListView
+        android:id="@+id/mealList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp"
+        android:padding="4dp" />
+
+</LinearLayout>
