@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#FAFAFA">
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GIỎ HÀNG CỦA BẠN"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="@color/green"
+        android:layout_marginTop="8dp" />
+    <!-- Danh sách món ăn -->
+    <ListView
+        android:id="@+id/cartListView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:dividerHeight="8dp"
+        android:divider="@android:color/darker_gray" />
+
+    <!-- Tổng tiền -->
+    <TextView
+        android:id="@+id/cartTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tổng: 0đ"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_marginTop="8dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        android:weightSum="10">
+
+        <!-- Nút quay lại -->
+        <Button
+            android:id="@+id/btnBackToHome"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text="Back"
+            android:backgroundTint="#2196F3"
+            android:textColor="#FFFFFF"
+            android:layout_marginEnd="4dp" />
+
+        <!-- Nút thanh toán -->
+        <Button
+            android:id="@+id/btnCheckout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="7"
+            android:text="Thanh toán"
+            android:backgroundTint="#4CAF50"
+            android:textColor="#FFFFFF"
+            android:layout_marginStart="4dp" />
+    </LinearLayout>
+
+</LinearLayout>

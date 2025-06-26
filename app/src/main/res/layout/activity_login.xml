@@ -57,18 +57,17 @@
             android:layout_marginTop="16dp">
 
             <Button
-                android:id="@+id/bLogin"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Login" />
-
-            <Button
                 android:id="@+id/bRegister"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Register" />
+            <Button
+                android:id="@+id/bLogin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Login" />
         </LinearLayout>
     </LinearLayout>
 

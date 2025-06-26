@@ -13,6 +13,18 @@
         android:theme="@style/Theme.NGUYENTHIMANDUY_2123110470"
         tools:targetApi="31">
         <activity
+            android:name=".CartAdapter"
+            android:exported="false" />
+        <activity
+            android:name=".ProductDetail"
+            android:exported="false" />
+        <activity
+            android:name=".CartItem"
+            android:exported="false" />
+        <activity
+            android:name=".CartActivity"
+            android:exported="false" />
+        <activity
             android:name=".MealAdapter"
             android:exported="false" />
         <activity

@@ -13,7 +13,6 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-
         <TextView
             android:id="@+id/tvHome"
             android:layout_width="match_parent"
@@ -21,7 +20,7 @@
             android:layout_marginBottom="16dp"
             android:gravity="center_horizontal"
             android:text="Resgiter"
-            android:textColor="@color/amber"
+            android:textColor="#FF000000"
             android:textSize="50sp"
             android:textStyle="bold" />
 
@@ -32,31 +31,8 @@
             android:layout_marginTop="12dp"
             android:hint="Số điện thoại / Tên đăng nhập"
             android:padding="12dp"
-            android:textColor="#FFFFFF"
+            android:textColor="#FF000000"
             android:textColorHint="#CCCCCC" />
-
-        <EditText
-            android:id="@+id/editPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:hint="Mật khẩu"
-            android:inputType="textPassword"
-            android:padding="12dp"
-            android:textColor="#FFFFFF"
-            android:textColorHint="#CCCCCC" />
-
-        <EditText
-            android:id="@+id/editConfirmPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:hint="Nhập lại mật khẩu"
-            android:inputType="textPassword"
-            android:padding="12dp"
-            android:textColor="#FFFFFF"
-            android:textColorHint="#CCCCCC" />
-
         <EditText
             android:id="@+id/editFullName"
             android:layout_width="match_parent"
@@ -64,7 +40,7 @@
             android:layout_marginTop="12dp"
             android:hint="Họ và Tên"
             android:padding="12dp"
-            android:textColor="#FFFFFF"
+            android:textColor="#FF000000"
             android:textColorHint="#CCCCCC" />
 
         <EditText
@@ -75,8 +51,31 @@
             android:hint="Email"
             android:inputType="textEmailAddress"
             android:padding="12dp"
-            android:textColor="#FFFFFF"
+            android:textColor="#FF000000"
             android:textColorHint="#CCCCCC" />
+        <EditText
+            android:id="@+id/editPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="Mật khẩu"
+            android:inputType="textPassword"
+            android:padding="12dp"
+            android:textColor="#FF000000"
+            android:textColorHint="#CCCCCC" />
+
+        <EditText
+            android:id="@+id/editConfirmPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="Nhập lại mật khẩu"
+            android:inputType="textPassword"
+            android:padding="12dp"
+            android:textColor="#FF000000"
+            android:textColorHint="#CCCCCC" />
+
+
 
         <CheckBox
             android:id="@+id/checkOrganization"
@@ -84,17 +83,36 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:text="Khách hàng thành viên"
-            android:textColor="#453C3C" />
+            android:textColor="#FF000000" />
 
-        <Button
-            android:id="@+id/bRegister"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="horizontal"
             android:layout_marginTop="24dp"
-            android:backgroundTint="#2196F3"
-            android:text="Đăng ký"
-            android:textColor="#000000"
-            android:textStyle="bold" />
-    </LinearLayout>
+            android:weightSum="10">
 
+            <!-- Nút Trở về -->
+            <Button
+                android:id="@+id/bBack"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:backgroundTint="#BDBDBD"
+                android:text="Back"
+                android:textColor="#FF000000"
+                android:textStyle="bold" />
+
+            <!-- Nút Đăng ký -->
+            <Button
+                android:id="@+id/bRegister"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:backgroundTint="#2196F3"
+                android:text="Đăng ký"
+                android:textColor="#FF000000"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    android:background="@android:color/white">
+
+    <!-- Ảnh món -->
+    <ImageView
+        android:id="@+id/cartItemImage"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:scaleType="centerCrop"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true" />
+
+    <!-- Nút xóa -->
+    <Button
+        android:id="@+id/cartItemRemoveBtn"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:text="X"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:backgroundTint="#F44336"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true" />
+
+    <!-- Tên món -->
+    <TextView
+        android:id="@+id/cartItemName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tên món"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_toEndOf="@id/cartItemImage"
+        android:layout_marginStart="12dp"
+        android:layout_alignTop="@id/cartItemImage"
+        android:layout_toStartOf="@id/cartItemRemoveBtn" />
+
+    <!-- Giá -->
+    <TextView
+        android:id="@+id/cartItemPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="50.000đ"
+        android:textColor="#FF5722"
+        android:textSize="14sp"
+        android:layout_below="@id/cartItemName"
+        android:layout_alignStart="@id/cartItemName" />
+
+    <!-- Số lượng -->
+    <LinearLayout
+        android:id="@+id/quantityLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/cartItemPrice"
+        android:layout_alignStart="@id/cartItemPrice"
+        android:layout_marginTop="4dp"
+        android:gravity="center_vertical">
+
+        <Button
+            android:id="@+id/btnDecrease"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:text="−"
+            android:textSize="20dp"
+            android:textColor="@color/green"
+            android:backgroundTint="#CCCCCC" />
+
+        <TextView
+            android:id="@+id/cartItemQuantity"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:text="1"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:background="#EEEEEE"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp" />
+
+        <Button
+            android:id="@+id/btnIncrease"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:text="+"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:backgroundTint="#CCCCCC" />
+    </LinearLayout>
+</RelativeLayout>
