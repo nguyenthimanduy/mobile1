@@ -14,7 +14,7 @@ public class ProductDetail extends AppCompatActivity {
 
     private ImageView detailImage;
     private TextView detailName, detailPrice, detailDescription;
-    private RatingBar detailRating;
+    private RatingBar  detailRating;
     private Button btnAddToCart;
     private ImageButton btnBackToHome;
 
@@ -34,6 +34,7 @@ public class ProductDetail extends AppCompatActivity {
         Intent intent = getIntent();
         String name = intent.getStringExtra("name");
         String price = intent.getStringExtra("price");
+        float  rating      = intent.getFloatExtra("rating", 0f);
         String description = intent.getStringExtra("description");
         int imageRes = intent.getIntExtra("imageRes", R.drawable.banh1);
 
@@ -41,6 +42,7 @@ public class ProductDetail extends AppCompatActivity {
         detailPrice.setText("Giá: " + price);
         detailDescription.setText(description);
         detailImage.setImageResource(imageRes);
+        detailRating.setRating(rating);
 
         btnAddToCart.setOnClickListener(v -> {
             Intent cartIntent = new Intent(ProductDetail.this, CartActivity.class);

@@ -18,6 +18,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
+        <ImageView
+            android:id="@+id/loginImage"
+            android:layout_width="377dp"
+            android:layout_height="155dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/logo" />
 
         <TextView
             android:id="@+id/tvHome"
@@ -42,7 +50,7 @@
             android:hint="Mật Khẩu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="numberPassword" />
+            android:inputType="textPassword" />
 
         <CheckBox
             android:id="@+id/checkBox"
@@ -61,13 +69,19 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Register" />
+                android:backgroundTint="#BA68C8"
+                android:text="Register"
+                android:textColor="#FFFFFF" />
+
             <Button
                 android:id="@+id/bLogin"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Login" />
+                android:backgroundTint="#FF5252"
+                android:text="Login"
+                android:textColor="#FFFFFF" />
+
         </LinearLayout>
     </LinearLayout>
 

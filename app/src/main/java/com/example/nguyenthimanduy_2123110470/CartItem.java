@@ -36,7 +36,7 @@ public class CartItem {
         this.quantity = quantity;
     }
 
-    // Gợi ý thêm: Setter cho price nếu bạn cần chỉnh sửa
+    // Gợi ý thêm: Setter cho price
     public void setPrice(String price) {
         this.price = price;
     }

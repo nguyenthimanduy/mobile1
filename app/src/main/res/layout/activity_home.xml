@@ -13,7 +13,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:src="@drawable/banh"
+        android:src="@drawable/logo"
         android:scaleType="centerCrop"
         android:layout_marginBottom="8dp" />
 
@@ -22,7 +22,7 @@
         android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Welcome to SoLa Food!"
+        android:text="Welcome to BURGERKING!"
         android:textSize="20sp"
         android:textStyle="bold"
         android:background="#FF5722"
@@ -64,7 +64,7 @@
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:src="@drawable/baseline_search_24"
                 android:contentDescription="Tìm kiếm"
-                android:tint="#FF5722" />
+                />
         </FrameLayout>
 
         <!-- Nút giỏ hàng -->

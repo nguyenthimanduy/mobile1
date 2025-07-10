@@ -5,9 +5,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -35,8 +36,9 @@ public class CartAdapter extends ArrayAdapter<CartItem> {
         TextView name = convertView.findViewById(R.id.cartItemName);
         TextView price = convertView.findViewById(R.id.cartItemPrice);
         TextView quantity = convertView.findViewById(R.id.cartItemQuantity);
-        Button btnIncrease = convertView.findViewById(R.id.btnIncrease);
-        Button btnDecrease = convertView.findViewById(R.id.btnDecrease);
+        ImageButton btnIncrease = convertView.findViewById(R.id.cartItemIncreaseBtn);
+        ImageButton btnDecrease = convertView.findViewById(R.id.cartItemDecreaseBtn);
+        ImageButton removeBtn = convertView.findViewById(R.id.cartItemRemoveBtn);
 
         image.setImageResource(item.getImageResId());
         name.setText(item.getName());
@@ -46,7 +48,7 @@ public class CartAdapter extends ArrayAdapter<CartItem> {
         // Nút tăng
         btnIncrease.setOnClickListener(v -> {
             item.setQuantity(item.getQuantity() + 1);
-            notifyDataSetChanged();  // gọi lại getView
+            notifyDataSetChanged();
             updateTotal();
         });
 
@@ -59,7 +61,14 @@ public class CartAdapter extends ArrayAdapter<CartItem> {
             }
         });
 
-        updateTotal();
+        // Nút xoá
+        removeBtn.setOnClickListener(v -> {
+            CartManager.removeItem(getContext(), item.getName());
+            items.remove(position);
+            notifyDataSetChanged();
+            updateTotal();
+            Toast.makeText(getContext(), "Đã xoá món khỏi giỏ hàng", Toast.LENGTH_SHORT).show();
+        });
 
         return convertView;
     }

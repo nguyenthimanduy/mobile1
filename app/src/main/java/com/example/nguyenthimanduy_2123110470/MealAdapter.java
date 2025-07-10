@@ -54,8 +54,11 @@ public class MealAdapter extends ArrayAdapter<Meal> {
             getContext().startActivity(intent);
         });
 
-        // ✅ Thêm vào giỏ (chỉ hiển thị thông báo)
         btnAdd.setOnClickListener(v -> {
+            // Thêm vào giỏ hàng
+            CartManager.addToCart(getContext(), meal);
+
+            // Hiển thị thông báo
             Toast.makeText(getContext(), meal.getName() + " đã được thêm vào giỏ hàng!", Toast.LENGTH_SHORT).show();
         });
 
